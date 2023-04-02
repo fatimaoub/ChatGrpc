@@ -1,0 +1,15 @@
+syntax="proto3";
+option java_package="ma.enset.stubs";
+service ChatService {
+  rpc texting(stream TextingMessage) returns(stream TextingResponse);
+}
+
+message TextingMessage{
+  string nom=1;
+  string message=2;
+}
+message TextingResponse{
+  string nom=1;
+  string message=2;
+  string reponse=3;
+}
